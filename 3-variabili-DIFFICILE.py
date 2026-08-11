@@ -65,3 +65,4 @@ Somma intero + float: 12.72 (tipo: <class 'float'>, dimensione: 24 byte)
 Stringa concatenata: 12.72DataSci (tipo: <class 'str'>, dimensione: 75 byte, lunghezza: 11)
 """
 
+print("prova")
