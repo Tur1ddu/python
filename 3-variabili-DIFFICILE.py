@@ -64,3 +64,17 @@ Stringa iniziale: DataSci (tipo: <class 'str'>, dimensione: 62 byte, lunghezza: 
 Somma intero + float: 12.72 (tipo: <class 'float'>, dimensione: 24 byte)
 Stringa concatenata: 12.72DataSci (tipo: <class 'str'>, dimensione: 75 byte, lunghezza: 11)
 """
+import sys
+
+
+number = int(input("inserire numero\n"))
+decimal_number = float(input("inserire numero decimale\n"))
+stringa = input("inserire almeno 5 caratteri\n")
+
+if len(stringa) < 5:
+   print("La stringa inserita è troppo corta. Inserisci una stringa di almeno 5 caratteri. \nRiprova.")
+
+somma_numeri = number + decimal_number
+tot = str(somma_numeri) + stringa
+
+print(f"Intero inserito: {number} (tipo: {type(number)}, dimensione: {sys.getsizeof(number)} byte) \nFloat inserito: {decimal_number} (tipo: {type(decimal_number)}, dimensione: {sys.getsizeof(decimal_number)}byte) \nStringa iniziale: {stringa} (tipo: {type(stringa)}, dimensione: {sys.getsizeof(stringa)}, lunghezza: {len(stringa)}) \nSomma intero + float: {somma_numeri} (tipo: {type(somma_numeri)}, dimensione: {sys.getsizeof(somma_numeri)} byte) \nStringa concatenata: {tot} (tipo: <class 'str'>, dimensione: {sys.getsizeof(tot)}, lunghezza: {len(tot)})")
