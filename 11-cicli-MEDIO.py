@@ -52,29 +52,3 @@ Numeri maggiori di zero: 5
 Valore massimo: 20
 
 """
-number_major = 0
-
-numeri = []
-
-while True:
-  scelta = input("Inserisci un numero (o scrivi 'stop' per finire): ")
-
-  if scelta == "fine":
-    break
-  try:
-    numero = int(scelta)
-    if numero > 0 :
-      number_major+=1
-    numeri.append(numero)
-  except ValueError:
-    print("Errore: devi inserire un numero intero, non lettere o simboli a caso.")
-
-if len(numeri) > 0:
-  somma = sum(numeri)
-  massimo = max(numeri)
-  
-  print(f"\nSomma: {somma}")
-  print(f"Numeri maggiori di zero: {number_major}")
-  print(f"Massimo: {massimo}")
-else:
-  print("\nNessun numero inserito, impossibile calcolare somma, media e massimo.")

@@ -35,27 +35,3 @@ stop
 output:
 Nessun numero inserito, impossibile calcolare somma, media e massimo.
 """
-
-numeri = []
-
-while True:
-  scelta = input("Inserisci un numero (o scrivi 'stop' per finire): ")
-    
-  if scelta == "stop":
-    break
-  try:
-    numero = int(scelta)
-    numeri.append(numero)
-  except ValueError:
-    print("Errore: devi inserire un numero intero, non lettere o simboli a caso.")
-
-if len(numeri) > 0:
-  somma = sum(numeri)
-  media = somma / len(numeri)
-  massimo = max(numeri)
-
-  print(f"\nSomma: {somma}")
-  print(f"Media: {media}")
-  print(f"Massimo: {massimo}")
-else:
-  print("\nNessun numero inserito, impossibile calcolare somma, media e massimo.")

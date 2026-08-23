@@ -34,18 +34,3 @@ passwordsbagliata
 output:
 Password errata
 """
-
-email="ciaomamma@gmail.com"
-password="Python123"
-
-print("richiesto accesso con credenziali ")
-emailUtente = input("inserisci l'email ")
-passwordUtente = input("inserisci la password ")
-if email == emailUtente and password == passwordUtente :
-    print("accesso eseguito correttamente ")
-elif password == passwordUtente :
-    print("email corretta password errata riprova")
-elif email == emailUtente :
-    print("password corretta email errata riprova")
-else:
-    print("credenziali incorrette riprova ")
