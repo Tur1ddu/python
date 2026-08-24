@@ -67,19 +67,3 @@ Totali per categoria magazzino:
   pantaloni: 7
 
 """
-import json #non usato quindi non necessario (perchè?)
-
-#bug, non esiste il file python/file.txt pertanto il programma crasha.
-with open("python/file.txt", "r") as f:
-	testo = f.read()
-
-righe = testo.split("\n")
-print("Numero righe:", len(righe))
-
-parole = testo.split()
-print("Numero parole:", len(parole))
-
-import csv #si mettono all'inizio
-
-with open("shirts.csv", "w") as f:
-  reader = csv.DictReader(f)

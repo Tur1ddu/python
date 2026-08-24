@@ -72,4 +72,3 @@ Ciao mondo (2)
 Programmare in Python è bello (5)
 
 """
-

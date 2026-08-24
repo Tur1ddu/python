@@ -36,21 +36,3 @@ Contenuto originale: Meglio un uovo oggi che una gallina domani
 Numero di caratteri: 42
 
 """
-
-
-with open("proverbio.txt","r") as f:
-   fileProverbio = f.read()
-   print(fileProverbio)
-   #chiude in automatico with
-
-
-with open("output.txt","w") as f:
-   f.write(f"Contenuto originale: {fileProverbio}")
-   f.write(f"numero di caratteri: {len(fileProverbio)}")
-
-
-with open("output.txt","w+") as f:
-   f.write(f"Contenuto originale: {fileProverbio}")
-   f.write(f"numero di caratteri: {len(fileProverbio)}")
-
-#la w+ soprascrive ma se il file non esiste non funziona
