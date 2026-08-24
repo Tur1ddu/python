@@ -63,38 +63,3 @@ Passw0rd!*
 output:
 Email non riconosciuta
 """
-email_registrata = "test@gmail.com"
-password_registrata = "testpy"
-
-email_utente = input("Inserisci email: ")
-password_utente = input("Inserisci password: ")
-
-if email_utente != email_registrata:
-    print("email non riconosciuta")
-elif password_utente != password_registrata:
-    print("password errata")
-else:
-    utente_esperto=False
-    eta = int(input("inserisci età: "))
-    esperienza = int(input("anni di esperienza: "))
-    corsi = int(input("corsi seguiti: "))
-
-    if eta < 18:
-        categoria_eta = "utente minorenne"
-    elif 18 <= eta <= 30: #compreso tra
-        categoria_eta = "utente giovane adulto"
-    else:
-        categoria_eta = "utente adulto"
-    
-    print(categoria_eta)
-
-    if esperienza >= 5 and corsi >= 3:
-        profilo = "utente esperto"
-        utente_esperto = True
-    else:
-        profilo = "utente in formazione"
-       
-    print(profilo)
-
-    if utente_esperto and eta > 25:
-        print("Profilo senior confermato")

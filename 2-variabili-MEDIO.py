@@ -55,5 +55,4 @@ eta = int(input("inserire eta\n"))
 altezza = float(input("inserire altezza\n"))
 anno_nascita = 2025 - eta
 peso_ideale = altezza * 25
-print("Nome: "+ nome + "\n" + "Eta: " + str(eta) +"\n"+ "Altezza: " + str(altezza) + "\n" + "Anno di nascita: " + str(anno_nascita) + "\n" + "Peso ideale stimato (kg): " 
-      + str(peso_ideale))
+print(f"Nome: {nome} \nEtà: {eta} anni \nAltezza: {altezza} \nAnno di nascita stimato:{anno_nascita} \nPeso ideale stimato (kg): {peso_ideale}")

@@ -41,5 +41,5 @@ Sei nato approssimativamente nel 1984.
 nome = input("inserire nome\n")
 eta = int(input("inserire eta\n"))
 altezza = float(input("inserire altezza\n"))
-annoNascita = 2026 - eta
-print("Ciao " + nome + ", " + "hai " +str(eta) + " anni e sei alto "+ str(altezza) +" metri. " +"\nSei nato approssimativamente nel "+ str(annoNascita))
+anno_nascita = 2026 - eta
+print(f"Ciao {nome}, hai {eta} anni e sei alto {altezza} metri. \nSei nato approssimativamente nel {anno_nascita}.")
