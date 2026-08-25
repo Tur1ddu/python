@@ -41,4 +41,5 @@ amiconi ={
 }
 amiconi["Gabriele"] = 301604993
 amiconi["Manlio"] = 993221667
-print(amiconi)
+print(list(amiconi.keys()))
+print(list(amiconi.values()))
