@@ -49,3 +49,35 @@ Marco: [5, 5, 5]
 Elena: [9, 10, 10]
 
 """
+
+
+#punto 1
+studenti = [
+  {"nome": "Gianni", "voti": [7, 8, 6, 5]},
+  {"nome": "Luca", "voti": [5, 4, 5, 6]},
+  {"nome": "Mario", "voti": [9, 9, 10, 8]},
+  {"nome": "Paola", "voti": [6, 6, 6, 6]}
+]
+media_studenti = []
+for studente in studenti:
+  somma_voti = 0
+  for voto in studente["voti"]:
+    somma_voti += voto
+  media = somma_voti/len(studente["voti"])
+  media_studenti.append((studente["nome"],media))
+print(media_studenti)
+
+#punto 2
+media_sufficente = set({})
+for media_studende in media_studenti:
+  nome, media = media_studende
+  if media >= 6:
+    media_sufficente.add(nome)
+print(media_sufficente)
+
+#punto 3
+studente_voti = {
+}
+for studente in studenti:
+  studente_voti[studente["nome"]] = list(set(studente["voti"]))
+print(studente_voti)
