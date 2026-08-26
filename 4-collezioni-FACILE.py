@@ -36,10 +36,10 @@ print(ordine_grandezza)
 ordine_grandezza.add(5)
 print(ordine_grandezza)
 amiconi ={
-    "Elio": 3045033309,
-    "Manlio": 3021034420, 
+    "Elio": "3045033309",
+    "Manlio": "3021034420", 
 }
-amiconi["Gabriele"] = 301604993
-amiconi["Manlio"] = 993221667
+amiconi["Gabriele"] = "301604993"
+amiconi["Manlio"] = "993221667"
 print(list(amiconi.keys()))
 print(list(amiconi.values()))
