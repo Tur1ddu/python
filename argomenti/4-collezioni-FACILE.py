@@ -24,3 +24,22 @@ Esempio:
 10. Valori: ['1234567890', '1112223333', '5556667777']
 
 """
+amici = ["Elio", "Manlio", "Giorgio", "Gabriele", "Davide"]
+print(amici)
+amici[2] = "Daniele"
+print(amici)
+eta_ragazzi = (19, 18, 30)
+#eta_ragazzi[2]= 15
+print(eta_ragazzi)
+ordine_grandezza ={1, 2, 2, 3, 3, 3, 4}
+print(ordine_grandezza)
+ordine_grandezza.add(5)
+print(ordine_grandezza)
+amiconi ={
+    "Elio": "3045033309",
+    "Manlio": "3021034420", 
+}
+amiconi["Gabriele"] = "301604993"
+amiconi["Manlio"] = "993221667"
+print(list(amiconi.keys()))
+print(list(amiconi.values()))

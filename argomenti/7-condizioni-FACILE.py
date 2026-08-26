@@ -34,3 +34,13 @@ passwordsbagliata
 output:
 Password errata
 """
+EMAIL = "studente@example.com"
+PASSWORD = "Python123"
+email = input("inserire email\n")
+password = input("inserire password\n")
+if email == EMAIL and password == PASSWORD:
+    print("Accesso consentito")
+elif email != EMAIL:
+    print("Email non riconosciuta")
+else:
+    print("Password errata")
