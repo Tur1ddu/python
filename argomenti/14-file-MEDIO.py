@@ -67,3 +67,72 @@ Totali per categoria magazzino:
   pantaloni: 7
 
 """
+import csv
+import json
+lista_stringhe = []
+#parte 1
+with open("esempio.txt", "r") as g:
+    numero_righe = 0
+    for riga in g:       
+        numero_righe += 1
+    print(f"numero righe: {numero_righe}")
+          
+with open("esempio.txt", "r") as f:
+    contenuto_esempio = f.read()
+    variabile_output = f"numero parole: {len(contenuto_esempio)}\n"
+    print(variabile_output)
+    lista_stringhe.append(variabile_output)
+
+with open("shirts.csv", "w" , newline="") as h:
+  writer = csv.writer(h)
+  writer.writerow(["ID", "Taglia","Colore", "Prezzo"])
+  writer.writerow(["1234", "M","Verde", 20.40])
+  writer.writerow(["3424","XL","Rosso", 23.10])
+  writer.writerow(["3052", "S","Nero", 17.40])
+
+#parte 2
+somma_prezzo = 0
+n_righe_cvs = 0  
+with open("shirts.csv", "r") as r:
+  reader = csv.DictReader(r)
+  for riga_csv in reader:
+      somma_prezzo += float(riga_csv["Prezzo"])
+      n_righe_cvs += 1
+      media_prezzo = somma_prezzo/n_righe_cvs
+      prima_output = f"Magliette superiore alla media:\n"   
+      if float(riga_csv["Prezzo"]) > media_prezzo:
+        print(prima_output)
+        lista_stringhe.append(prima_output)
+        prima_output =    f"Taglia: {riga_csv["Taglia"], riga_csv["Colore"], riga_csv["Prezzo"]}\n"
+        print(prima_output)
+        lista_stringhe.append(prima_output)
+  prima_output = f"La media del prezzo =  {media_prezzo}\n"
+  print(prima_output)
+  lista_stringhe.append(prima_output)
+
+#parte 3
+
+inventario ={
+  "magliette": [
+    {"taglia": "M", "quantita": 20},
+    {"taglia": "L", "quantita": 40}
+  ],
+  "pantaloni": [
+   {"taglia": "Ciccionis", "quantita": 13}
+  ]
+}
+with open("inventory.json", "w") as l:
+  json.dump(inventario, l, indent=4)
+
+with open("inventory.json", "r") as m:
+  dati = json.load(m)
+
+  for key in list(dati.keys()):
+    numero_tot = 0
+    for elemento in dati[key] :
+      numero_tot += elemento["quantita"]
+    output_json = f"Categoria {key}: {numero_tot} prodotti\n"
+    print(output_json) 
+    lista_stringhe.append(output_json)
+with open("report.txt", "w") as n:
+   n.writelines(lista_stringhe)

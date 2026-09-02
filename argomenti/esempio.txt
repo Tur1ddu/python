@@ -1,0 +1,3 @@
+Ciao mondo
+Questo e' un file di esempio.
+Contiene alcune righe di testo.

@@ -1,0 +1,6 @@
+numero parole: 73
+Magliette superiore alla media:
+Taglia: ('XL', 'Rosso', '23.1')
+La media del prezzo =  20.3
+Categoria magliette: 60 prodotti
+Categoria pantaloni: 13 prodotti
