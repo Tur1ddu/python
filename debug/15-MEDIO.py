@@ -13,8 +13,3 @@ def ricerca_binaria(lista, target):
         else:
             dx = mid + 1
     return -1
-
-#print(ricerca_binaria([1, 3, 5, 7, 9], 5))
-print(ricerca_binaria([1, 3, 5, 7, 9], 6))
-
-#---non so se ho completato mancava il print pero 

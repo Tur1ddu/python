@@ -3,11 +3,11 @@
 
 def dividi(a, b):
     try:
-        return float(a / b)
-    except ZeroDivisionError:
+
+        return a / b
+    except ValueError:
         print("Errore: divisione per zero")
+        return 0
 
 print(dividi(10, 2))
 print(dividi(5, 0))
-
-#completato--
