@@ -2,7 +2,7 @@
 #Esempio: is_vuota([]) → True, is_vuota([1]) → False
 
 def is_vuota(lista):
-    if lista == None:
+    if len(lista) == 0:
         return True
     return False
 
