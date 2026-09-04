@@ -1,10 +1,15 @@
-#La funzione deve restituire un dizionario con ogni parola e il numero di volte in cui appare nella lista.
-#Esempio: conta_parole(["a","b","a"]) → {"a":2, "b":1}
+#Gestisci le spese giornaliere
+spese = []
+print("Registro Spese")
+while True:
+    voce = input("Cosa hai comprato? (o 'fine'): ")
+    if voce == "fine":
+        break
+    prezzo = input("Quanto hai speso? ")
+    spese.append(prezzo)
 
-def conta_parole(parole):
-    contatore = {}
-    for p in parole:
-        contatore[p] += 1
-    return contatore
+totale = 0
+for spesa in spese:
+    totale = totale + spesa
 
-print(conta_parole(["ciao", "mondo", "ciao"]))
+print(f"Hai speso un totale di: {totale:.2f}")

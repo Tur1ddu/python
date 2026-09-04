@@ -1,10 +1,10 @@
-#Il generatore deve produrre i primi n numeri di Fibonacci. Esempio: list(fibonacci(6)) → [0,1,1,2,3,5]
+#La funzione deve restituire un dizionario con ogni parola e il numero di volte in cui appare nella lista.
+#Esempio: conta_parole(["a","b","a"]) → {"a":2, "b":1}
 
-def fibonacci(n):
-    a, b = 0, 1
-    for _ in range(n):
-        yield a
-        a = b
-        b = a + b
+def conta_parole(parole):
+    contatore = {}
+    for p in parole:
+        contatore[p] += 1
+    return contatore
 
-print(list(fibonacci(6)))
+print(conta_parole(["ciao", "mondo", "ciao"]))

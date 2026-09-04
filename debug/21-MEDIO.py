@@ -1,6 +1,9 @@
-#Stampare la tabellina di un numero scelto
-n = int(input("Quale tabellina vuoi vedere? "))
+#Rinominare un file per simularne il backup
+import os
 
-for i in range(10):
-    prodotto = n * i
-    print(f"{n} x {i} = {prodotto}")
+file_originale = "dati.csv"
+if os.path.exists(file_originale):
+    os.rename(file_originale, "backup/dati_vecchi.csv")
+    print("Backup completato")
+else:
+    print("Errore: il file non esiste")

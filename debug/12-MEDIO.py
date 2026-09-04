@@ -1,10 +1,11 @@
-#La funzione deve restituire un dizionario con ogni parola e il numero di volte in cui appare nella lista.
-#Esempio: conta_parole(["a","b","a"]) → {"a":2, "b":1}
+#Gestisci un set di nomi per evitare duplicati
+studenti_presenti = {"Marco", "Anna"}
+nuovo_studente = input("Chi è arrivato? ")
 
-def fattoriale(n):
-    if n == 1:
-        return 1
-    return n * fattoriale(n)
+if nuovo_studente in studenti_presenti:
+    print("Studente già registrato!")
+else:
+    studenti_presenti.add[nuovo_studente]
+    print(f"Benvenuto {nuovo_studente}")
 
-print(fattoriale(5))
-print(fattoriale(0))
+print("Totale presenti: " + len(studenti_presenti))

@@ -1,31 +1,15 @@
-# Risultato atteso:
-#   La funzione deve leggere una stringa in formato CSV
-#   (valori separati da virgola, righe separate da "\n"),
-#   ignorare la riga di intestazione e restituire una lista
-#   di dizionari, uno per ogni riga dati.
-#   Le chiavi del dizionario vengono dalla prima riga (intestazione).
-#   Esempio:
-#       csv = "nome,età,città\nMarco,30,Roma\nAnna,25,Milano"
-#       parse_csv(csv) → [
-#           {"nome": "Marco", "età": "30", "città": "Roma"},
-#           {"nome": "Anna",  "età": "25", "città": "Milano"}
-#       ]
+#La funzione deve trovare l'indice di target in una lista ordinata usando la ricerca binaria, o -1 se non trovato.
+#Esempio: ricerca_binaria([1,3,5,7,9], 5) → 2
+#Esempio: ricerca_binaria([1,3,5,7,9], 6) → -1
 
-def parse_csv(testo):
-    righe = testo.split("\n")
-    intestazione = righe[0].split(",")
-    risultato = []
-
-    for riga in righe:
-        valori = riga.split(",")
-        record = {}
-        for i in range(len(intestazione)):
-            record[intestazione[i]] = valori[i]
-        risultato.append(record)
-
-    return risultato
-
-
-csv = "nome,età,città\nMarco,30,Roma\nAnna,25,Milano"
-for r in parse_csv(csv):
-    print(r)
+def ricerca_binaria(lista, target):
+    sx, dx = 0, len(lista)
+    while sx <= dx:
+        mid = (sx + dx) // 2
+        if lista[mid] == target:
+            return mid
+        elif lista[mid] < target:
+            sx = mid - 1
+        else:
+            dx = mid + 1
+    return -1
