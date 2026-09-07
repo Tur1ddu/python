@@ -3,6 +3,7 @@
 
 def dividi(a, b):
     try:
+
         return a / b
     except ValueError:
         print("Errore: divisione per zero")

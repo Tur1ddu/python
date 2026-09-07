@@ -35,3 +35,32 @@ stop
 output:
 Nessun numero inserito, impossibile calcolare somma, media e massimo.
 """
+#parte 
+
+lista_numeri = []
+while True:
+  try:
+    numero_utente = input("inserire numero:\n")
+    if numero_utente == "stop":
+      break
+    numero_positivo = int(numero_utente)
+    if numero_positivo > 0:
+      lista_numeri.append(numero_positivo)
+    else:
+      print("inserisci solo numeri positivi")
+  except ValueError:
+    print("errore di sistema, questo non è un numero") 
+print(lista_numeri)
+
+#parte 2
+somma_numeri = 0
+n_max = 0
+for numero in lista_numeri :
+    somma_numeri += numero
+    if numero > n_max:
+      n_max = numero
+media_artmetica = somma_numeri/len(lista_numeri)
+print(f"la media artimetica è --> {media_artmetica}")
+print(f"la sommma dei numeri è --> {somma_numeri}")
+print(f"numero massimo --> {n_max}")
+print(lista_numeri)

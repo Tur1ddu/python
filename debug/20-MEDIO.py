@@ -1,11 +1,9 @@
-#Gestisci un set di nomi per evitare duplicati
-studenti_presenti = {"Marco", "Anna"}
-nuovo_studente = input("Chi è arrivato? ")
+#Salvare nomi ed email in un file CSV
+import csv
 
-if nuovo_studente in studenti_presenti:
-    print("Studente già registrato!")
-else:
-    studenti_presenti.add[nuovo_studente]
-    print(f"Benvenuto {nuovo_studente}")
+def salva_contatto(nome, email):
+    with open("contatti.csv", "a") as f:
+        writer = csv.writer(f)
+        writer.writerow(nome, email)
 
-print("Totale presenti: " + len(studenti_presenti))
+salva_contatto("Mario", "mario@email.it")

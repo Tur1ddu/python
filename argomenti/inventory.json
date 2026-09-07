@@ -1,0 +1,18 @@
+{
+    "magliette": [
+        {
+            "taglia": "M",
+            "quantita": 20
+        },
+        {
+            "taglia": "L",
+            "quantita": 40
+        }
+    ],
+    "pantaloni": [
+        {
+            "taglia": "Ciccionis",
+            "quantita": 13
+        }
+    ]
+}

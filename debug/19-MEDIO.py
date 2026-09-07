@@ -1,15 +1,8 @@
-#Gestisci le spese giornaliere
-spese = []
-print("Registro Spese")
-while True:
-    voce = input("Cosa hai comprato? (o 'fine'): ")
-    if voce == "fine":
-        break
-    prezzo = input("Quanto hai speso? ")
-    spese.append(prezzo)
+import datetime
 
-totale = 0
-for spesa in spese:
-    totale = totale + spesa
+oggi = datetime.date.today()
+print(f"Oggi è il: {oggi}")
 
-print(f"Hai speso un totale di: {totale:.2f}")
+# Aggiungi 30 giorni
+scadenza = oggi + 30
+print(f"La scadenza è il: {scadenza}")

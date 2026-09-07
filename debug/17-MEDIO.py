@@ -1,13 +1,9 @@
-#La funzione deve restituire una lista piatta da una lista annidata a qualsiasi profondità.
-#Esempio: appiattisci([1,[2,[3,4]],5]) → [1,2,3,4,5]
+#Leggere un file di testo e contare quante volte appare una parola
+def conta_errori(nome_file, parola):
+    with open(nome_file, "w") as f:
+        contenuto = f.read()
+        conteggio = contenuto.count(parola)
+    return conteggio
 
-def appiattisci(lista):
-    risultato = []
-    for el in lista:
-        if isinstance(el, list):
-            risultato.append(appiattisci(el))
-        else:
-            risultato.append(el)
-    return risultato
-
-print(appiattisci([1,[2,[3,4]],5]))
+print(f"Errori trovati: {conta_errori('log.txt','ERROR')}")
+print(f"Errori trovati: {conta_errori('log.txt','INFO')}")

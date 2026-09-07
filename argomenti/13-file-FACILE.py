@@ -36,3 +36,18 @@ Contenuto originale: Meglio un uovo oggi che una gallina domani
 Numero di caratteri: 42
 
 """
+
+with open("proverbio.txt", "w") as f:
+    f.write("quando la cacca e dura, i duri iniziano a cagare")
+
+with open("proverbio.txt", "r") as g:
+    contenuto_poverbio = g.read()
+    print(f"il proverbio dice: {contenuto_poverbio}")
+
+with open("output.txt", "w") as a:
+    a.write(f"Contenuto originale: {contenuto_poverbio}\n")
+    a.write(f"Numero di caratteri: {len(contenuto_poverbio)}\n")
+
+with open("output.txt", "r") as e:
+    contenuto_output = e.read()
+    print(contenuto_output)
