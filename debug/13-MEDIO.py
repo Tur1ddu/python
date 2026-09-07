@@ -5,7 +5,7 @@ while True:
     voce = input("Cosa hai comprato? (o 'fine'): ")
     if voce == "fine":
         break
-    prezzo = input("Quanto hai speso? ")
+    prezzo = int(input("Quanto hai speso? "))
     spese.append(prezzo)
 
 totale = 0
