@@ -3,4 +3,4 @@
 def ripeti(testo, n):
     return testo * n
 
-print(ripeti(3, "ha"))
+print(ripeti("ha", 3))
