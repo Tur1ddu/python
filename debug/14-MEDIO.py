@@ -5,9 +5,8 @@ def dividi(a, b):
     try:
 
         return a / b
-    except ValueError:
+    except ZeroDivisionError:
         print("Errore: divisione per zero")
-        return 0
 
 print(dividi(10, 2))
 print(dividi(5, 0))
